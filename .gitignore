@@ -3,3 +3,4 @@
 __pycache__
 env
 coachadmin/social_login/migrations
+db.sqlite3
