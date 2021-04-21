@@ -2,3 +2,4 @@
 .vscode
 __pycache__
 env
+coachadmin/social_login/migrations
