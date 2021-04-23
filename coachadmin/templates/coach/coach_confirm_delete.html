@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block head_content %}
+<title>Delete post</title>
+{% endblock %}
+{% block container %}
+    <div class="container">
+        <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="hidden" name="user" value="{{ user.pk }}" />
+        <h4>Are you sure you want to delete your the coach {{ object.firstName }} ?</h4>
+        <button type="submit" class="btn btn-danger mt-5">Delete</button>
+        </form>
+    </div>
+{% endblock %}
