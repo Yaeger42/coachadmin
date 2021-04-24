@@ -4,6 +4,7 @@ from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView, ListView, DeleteView, UpdateView
 from django.contrib.auth import views as auth_views
 
+
 from coach.models import Coach
 from coach.forms import CreateCoachForm
 
@@ -27,7 +28,8 @@ class CoachDeleteView(LoginRequiredMixin, DeleteView):
 
 
 class LogoutView(LoginRequiredMixin, auth_views.LogoutView):
-    template_name = 'coach/logged_out.html'
+    template_name = 'index.html'
+    success_url = reverse_lazy('/')
 
 
 class EditCoachView(LoginRequiredMixin, UpdateView):
@@ -36,3 +38,4 @@ class EditCoachView(LoginRequiredMixin, UpdateView):
     context_object_name = 'coach'
     template_name = 'coach/edit.html'
     success_url = reverse_lazy('coach:feed')
+

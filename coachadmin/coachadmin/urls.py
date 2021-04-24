@@ -18,11 +18,13 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 from django.conf.urls.static import static
 from django.conf import settings
+from django.conf.urls import url
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='social_login/index.html')),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('coach/', include(('coach.urls', 'coach'), namespace='coach')),
+    path('api/', include([path('coaches/', include('restapi.urls'))]))
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

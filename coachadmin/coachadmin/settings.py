@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    'rest_framework',
+    'restapi'
 ]
 
 MIDDLEWARE = [
@@ -136,7 +138,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Custom auth backends
 AUTHENTICATION_BACKENDS=('django.contrib.auth.backends.ModelBackend', 'allauth.account.auth_backends.AuthenticationBackend')
-SITE_ID = 3
+SITE_ID = 4
 LOGIN_REDIRECT_URL = '/'
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
@@ -158,5 +160,5 @@ STATICFILES_FINDERS = [
 ]
 
 LOGIN_URL = '/'
-LOGIN_REDIRECT_URL = '/coaches'
+LOGIN_REDIRECT_URL = '/coach/feed'
 LOGOUT_REDIRECT_URL = LOGIN_URL
