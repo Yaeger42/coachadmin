@@ -83,13 +83,24 @@ WSGI_APPLICATION = 'coachadmin.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+}"""
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'django',
+        'USER': os.environ['pguser'],
+        'PASSWORD': os.environ['pgpassword'],
+        'HOST': os.environ['pghost'],
+        'PORT': os.environ['pgport']
+
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -158,6 +169,8 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
+
+STATIC_ROOT = '/site/assets'
 
 LOGIN_URL = '/'
 LOGIN_REDIRECT_URL = '/coach/feed'
