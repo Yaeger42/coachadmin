@@ -43,4 +43,8 @@ What you need to know is that there are 5 endpoints
 
 If you want to run it locally you're also going to need to configure your google account api with a key to be able to login. You'll need an account in google cloud platform and after that configure the accesses here: https://console.cloud.google.com/apis/credentials . For more detailed instructions on the login which is based on ```django-allauth``` framework follow the instructions in here starting from step 7. https://whizzoe.medium.com/in-5-mins-set-up-google-login-to-sign-up-users-on-django-e71d5c38f5d5
 
-Also make sure that you uncomment the
+The app is deployed here: https://still-refuge-85328.herokuapp.com/
+
+So you don't need to configure anything if you don't want to.
+
+Should you have any questions regarding the functioning of the app or if you encounter any trouble when trying to run it locally please feel free to reach me at: projectdcd@gmail.com
