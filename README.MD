@@ -1,6 +1,7 @@
 # How to run locally
 
 - Create a new virtual environment with the command ```python3 -m venv env```
+- Uncomment the section from the sqlite database (for local runs only)
 - Activate it with ```$ source env/bin/activate``` (for linux and mac only)
 - On the root folder run ```$ pip install -r requirements.txt```
 - Navigate to the coachadmin folder and inside of it run: ```$ python3 manage.py runserver```
@@ -40,3 +41,6 @@ What you need to know is that there are 5 endpoints
 }
 ```
 
+If you want to run it locally you're also going to need to configure your google account api with a key to be able to login. You'll need an account in google cloud platform and after that configure the accesses here: https://console.cloud.google.com/apis/credentials . For more detailed instructions on the login which is based on ```django-allauth``` framework follow the instructions in here starting from step 7. https://whizzoe.medium.com/in-5-mins-set-up-google-login-to-sign-up-users-on-django-e71d5c38f5d5
+
+Also make sure that you uncomment the
