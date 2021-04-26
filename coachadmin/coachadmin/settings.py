@@ -170,7 +170,7 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
-STATIC_ROOT = '/site/assets'
+STATIC_ROOT = '/site/assets/'
 
 LOGIN_URL = '/'
 LOGIN_REDIRECT_URL = '/coach/feed'
