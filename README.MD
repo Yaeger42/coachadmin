@@ -6,6 +6,7 @@
 - Navigate to the coachadmin folder and inside of it run: ```$ python3 manage.py runserver```
 
 # How to run with gunicorn
+- Follow all the steps from <strong> How to run locally </strong> except the last one
 - On the root folder run the following: ```$ gunicorn coachadmin.wsgi --chdir ./coachadmin
 
 # Making requests
